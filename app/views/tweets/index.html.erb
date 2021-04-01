@@ -1,0 +1,17 @@
+<h1>GeekTwitter</h1>
+<h3>Tweet一覧</h3>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+      <%= link_to t.title, tweet_path(t.id) %>
+      <%= button_to "削除する", "/tweets/#{t.id}", { method: :delete, data: { confirm: '本当に削除しますか？' } } %>
+      <%= button_to "削除する", tweet_path(t.id), data: { confirm: 'よろしいですか？' } %>
+    </div>
+  <% end %>
+</div>
+
+<div class='p-top__paginate'><%= paginate @tweets %></div>
+
+
+
