@@ -6,14 +6,12 @@
     <%= csp_meta_tag %>
 
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </head>
 
   <body>
     <%= yield %>
-    <p id="test">jQueryでーーーーーす</p>
-    <p class="hoge">色を変えまーーーーーーーす</p>
   </body>
 </html>

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "hello/index" => "hello#index"
   root to: "hello#index"
   resources :tweets
+  resources :posts
+
 end
